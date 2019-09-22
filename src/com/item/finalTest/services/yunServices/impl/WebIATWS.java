@@ -4,6 +4,9 @@ import com.google.gson.JsonObject;
 import okhttp3.*;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
+
+import static org.hamcrest.CoreMatchers.nullValue;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -24,6 +27,7 @@ import java.util.*;
  */
 
 public class WebIATWS extends WebSocketListener {
+	public static  String soundResult=null;
 	public static  String file = null; // 中文
 	public static  String appid =null; // 在控制台-我的应用获取
 	public static final int StatusFirstFrame = 0;
@@ -158,6 +162,7 @@ public class WebIATWS extends WebSocketListener {
 					System.out.println("最终识别结果 ==》" + decoder.toString());
 					System.out.println("本次识别sid ==》" + resp.getSid());
 					decoder.discard();
+					soundResult=decoder.toString();
 					webSocket.close(1000, "");
 				} else {
 					// todo 根据返回的数据处理

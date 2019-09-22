@@ -1,5 +1,7 @@
 package com.item.finalTest.services.yunServices.impl;
 
+import static org.hamcrest.CoreMatchers.nullValue;
+
 import java.io.FileInputStream;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -13,9 +15,13 @@ import com.item.finalTest.services.yunServices.interfaces.recognizes;
 
 
 public class recognizeImpl extends WebSocketListener implements recognizes {
-
+	
+	/**
+	 * 声音识别具体实现方法
+	 */
 	@Override
 	public String getSoundDate(String soundUrl) throws Exception {
+		String result=WebIATWS.soundResult;
 		if(StringUtil.isBlank(soundUrl)) {
 			throw new Exception("param is null");
 		}
@@ -43,8 +49,11 @@ public class recognizeImpl extends WebSocketListener implements recognizes {
 		}else {
 			throw new Exception("云服务接口配置文件不完整");
 		}
-		return null;
+		return result;
 	}
+	/**
+	 * 图像识别具体实现方法
+	 */
 	@Override
 	public String getImageDate(String imageUrl) throws Exception {
 		String result = null;
