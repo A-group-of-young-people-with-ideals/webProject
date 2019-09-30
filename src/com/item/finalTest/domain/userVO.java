@@ -101,4 +101,11 @@ public class userVO implements Serializable {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+
+	@Override
+	public String toString() {
+		return "userVO [userId=" + userId + ", name=" + name + ", age=" + age + ", sex=" + sex + ", email=" + email
+				+ ", telephone=" + telephone + ", address=" + address + "]";
+	}
+	
 }

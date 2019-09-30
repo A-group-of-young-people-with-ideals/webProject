@@ -16,7 +16,7 @@ public class emailBusiCSImpl implements IEmailBusiCS {
 		if (emailVO == null) {
 			throw new Exception("param is null");
 		}
-		// ¶ÁÈ¡ÅäÖÃÎÄ¼ş
+		// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("src/configuration/email.properties"));
 		String smtpHost = prop.getProperty("smtpHost");
@@ -27,18 +27,18 @@ public class emailBusiCSImpl implements IEmailBusiCS {
 			String content = emailVO.getContent();
 			String theme = emailVO.getTheme();
 			if (!StringUtil.isBlank(hisEmail) && !StringUtil.isBlank(content) && !StringUtil.isBlank(theme)) {
-				// ĞÅ·â
+				// ï¿½Å·ï¿½
 				emailAssit assit = new emailAssit();
-				// ·¢ĞÅÈËÏà¹ØĞÅÏ¢
-				assit.setSmtpHost(smtpHost);// Èç¹ûÊ¹ÓÃ163ÓÊÏä£¬ĞŞ¸ÄÎªsmtp.163.com
+				// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+				assit.setSmtpHost(smtpHost);// ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½163ï¿½ï¿½ï¿½ä£¬ï¿½Ş¸ï¿½Îªsmtp.163.com
 				assit.setFromEmail(yourEmail);
 				assit.setPassword(secretKey);
-				// ÊÕĞÅÈË¼°ÓÊÏä¸ñÊ½
+				// ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½
 				assit.sendMessage(hisEmail, content, theme);
 				result = true;
 			}
 		} else {
-			throw new Exception("ÓÊ¼şÅäÖÃ²ÎÊı²»ÍêÕû");
+			throw new Exception("ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
 		return result;
 	}

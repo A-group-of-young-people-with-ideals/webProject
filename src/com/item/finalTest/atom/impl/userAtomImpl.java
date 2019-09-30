@@ -44,6 +44,7 @@ public class userAtomImpl implements IUserAtom {
 				user.setName(name);
 				user.setSex(sex);
 				user.setAddress(address);
+				System.out.println(user.getAddress());
 			}
 			list.add(user);
 		}
