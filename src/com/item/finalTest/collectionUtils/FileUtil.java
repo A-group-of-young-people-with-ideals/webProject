@@ -10,11 +10,11 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * ÎÄ¼ş²Ù×÷¹¤¾ßÀà
+ * æ–‡ä»¶æ“ä½œå·¥å…·ç±»
  */
 public class FileUtil {
 	/**
-	 * ¶ÁÈ¡ÎÄ¼şÄÚÈİÎª¶ş½øÖÆÊı×é
+	 * è¯»å–æ–‡ä»¶å†…å®¹ä¸ºäºŒè¿›åˆ¶æ•°ç»„
 	 * 
 	 * @param filePath
 	 * @return
@@ -30,7 +30,7 @@ public class FileUtil {
 	}
 
 	/**
-	 * Á÷×ª¶ş½øÖÆÊı×é
+	 * æµè½¬äºŒè¿›åˆ¶æ•°ç»„
 	 * 
 	 * @param in
 	 * @return
@@ -48,7 +48,7 @@ public class FileUtil {
 	}
 
 	/**
-	 * ±£´æÎÄ¼ş
+	 * ä¿å­˜æ–‡ä»¶
 	 * 
 	 * @param filePath
 	 * @param fileName

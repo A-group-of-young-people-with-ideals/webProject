@@ -2,11 +2,11 @@ package com.item.finalTest.constant;
 
 public class finalTest {
 	public static final class fileType {
-		//ÎÄ¼şÀàĞÍÎªÕÕÆ¬
+		//æ–‡ä»¶ç±»å‹ä¸ºç…§ç‰‡
 		public static final String IMAGE_TYPE="0";
-		//ÎÄ¼şÀàĞÍÎªÒôÆµ
+		//æ–‡ä»¶ç±»å‹ä¸ºéŸ³é¢‘
 		public static final String SOUND_TYPE="1";
-		//ÆäËûÎÄ¼şÀàĞÍ
+		//å…¶ä»–æ–‡ä»¶ç±»å‹
 		public static final String FILE_TYPE="2";
 	}
 }

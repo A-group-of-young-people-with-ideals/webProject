@@ -3,46 +3,46 @@ package com.item.finalTest.domain;
 import java.io.Serializable;
 
 /**
- * ÓÃ»§ĞÅÏ¢
+ * ç”¨æˆ·ä¿¡æ¯
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 
 public class userVO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	/**
-	 * ÓÃ»§id
+	 * ç”¨æˆ·id
 	 */
 	private Long userId;
 	
 	/**
-	 * ÓÃ»§ĞÕÃû
+	 * ç”¨æˆ·å§“å
 	 */
 	private String name;
 	
 	/**
-	 * ÓÃ»§ÄêÁä
+	 * ç”¨æˆ·å¹´é¾„
 	 */
 	private int age;
 	
 	/**
-	 * ÓÃ»§ĞÔ±ğ
+	 * ç”¨æˆ·æ€§åˆ«
 	 */
 	private String sex;
 	
 	/**
-	 * ÓÃ»§ÓÊÏä
+	 * ç”¨æˆ·é‚®ç®±
 	 */
 	private String email;
 	
 	/**
-	 * ÓÃ»§µç»°
+	 * ç”¨æˆ·ç”µè¯
 	 */
 	private String telephone;
 	
 	/**
-	 * ÓÃ»§µØÖ·
+	 * ç”¨æˆ·åœ°å€
 	 */
 	private String address;
 

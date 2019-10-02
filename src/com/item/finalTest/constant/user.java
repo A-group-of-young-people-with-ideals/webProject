@@ -1,13 +1,14 @@
 package com.item.finalTest.constant;
+
 /**
- * ÓÃ»§ÖĞ³£Á¿µÄ¶¨Òå
+ * ç”¨æˆ·ä¸­å¸¸é‡çš„å®šä¹‰
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 public class user {
 	private final String STATUS_0 = "0";
 	private final String STATUS_1 = "1";
-	private final String STATUS_0_DESC = "ÎŞĞ§";
-	private final String STATUS_1_DESC="ÓĞĞ§";
+	private final String STATUS_0_DESC = "æ— æ•ˆ";
+	private final String STATUS_1_DESC="æœ‰æ•ˆ";
 
 }

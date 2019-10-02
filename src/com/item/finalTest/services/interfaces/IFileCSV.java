@@ -5,16 +5,17 @@ import java.util.List;
 import org.apache.commons.fileupload.FileItem;
 
 /**
- * ÎÄ¼ş²Ù×÷Ïà¹Ø½Ó¿Ú
+ * æ–‡ä»¶æ“ä½œç›¸å…³æ¥å£
  * @author hemb
- * @date   2019Äê9ÔÂ30ÈÕ
+ * @date   2019å¹´9æœˆ30æ—¥
  */
 public interface IFileCSV {
 	
 	/**
-	 * ÉÏ´«ÎÄ¼ş½Ó¿Ú
+	 * ä¸Šä¼ æ–‡ä»¶æ¥å£
 	 * @throws Exception 
 	 */
 	public String UpLoadFile(List<FileItem> list,String fileType,String basePath) throws Exception;
 
 }
+

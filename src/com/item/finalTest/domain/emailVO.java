@@ -2,24 +2,24 @@ package com.item.finalTest.domain;
 
 import java.io.Serializable;
 /**
- * ÓÊ¼şÖ÷Ìå¡¢·¢ËÍ¶ÔÏó¡¢·¢ËÍÖ÷Ìâ
+ * é‚®ä»¶ä¸»ä½“ã€å‘é€å¯¹è±¡ã€å‘é€ä¸»é¢˜
  * @author hemb
- * @date   2019Äê9ÔÂ22ÈÕ
+ * @date   2019å¹´9æœˆ22æ—¥
  */
 public class emailVO implements Serializable {
 	/**
-	 * ½ÓÊÜÕßÓÊÏä
+	 * æ¥å—è€…é‚®ç®±
 	 */
 	private String hisEmail;
 	
 	/**
-	 * ÓÊ¼şÄÚÈİ
+	 * é‚®ä»¶å†…å®¹
 	 * @return
 	 */
 	private String content;
 	
 	/**
-	 * ÓÊ¼şÖ÷Ìâ
+	 * é‚®ä»¶ä¸»é¢˜
 	 * @return
 	 */
 	private String theme;

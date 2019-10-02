@@ -16,7 +16,7 @@ public class emailBusiCSImpl implements IEmailBusiCS {
 		if (emailVO == null) {
 			throw new Exception("param is null");
 		}
-		// ��ȡ�����ļ�
+		//读取配置文件
 		Properties prop = new Properties();
 		prop.load(new FileInputStream("src/configuration/email.properties"));
 		String smtpHost = prop.getProperty("smtpHost");
@@ -27,18 +27,18 @@ public class emailBusiCSImpl implements IEmailBusiCS {
 			String content = emailVO.getContent();
 			String theme = emailVO.getTheme();
 			if (!StringUtil.isBlank(hisEmail) && !StringUtil.isBlank(content) && !StringUtil.isBlank(theme)) {
-				// �ŷ�
+				//信封
 				emailAssit assit = new emailAssit();
-				// �����������Ϣ
-				assit.setSmtpHost(smtpHost);// ���ʹ��163���䣬�޸�Ϊsmtp.163.com
+				 //发信人相关信息
+				assit.setSmtpHost(smtpHost);//如果使用163邮箱，修改为smtp.163.com
 				assit.setFromEmail(yourEmail);
 				assit.setPassword(secretKey);
-				// �����˼������ʽ
+				//收信人及邮箱格式
 				assit.sendMessage(hisEmail, content, theme);
 				result = true;
 			}
 		} else {
-			throw new Exception("�ʼ����ò���������");
+			throw new Exception("配置文件不完善");
 		}
 		return result;
 	}

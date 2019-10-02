@@ -3,15 +3,15 @@ package com.item.finalTest.services.yunServices.interfaces;
 
 
 /**
- * ¼¯³ÉÁËÔÆ·şÎñ½Ó¿Ú°üÀ¨Í¼ÏñÊ¶±ğ¡¢ÓïÒôÊ¶±ğµÈ
+ * é›†æˆäº†äº‘æœåŠ¡æ¥å£åŒ…æ‹¬å›¾åƒè¯†åˆ«ã€è¯­éŸ³è¯†åˆ«ç­‰
  * @author hemb
- * @date   2019Äê9ÔÂ21ÈÕ
+ * @date   2019å¹´9æœˆ21æ—¥
  */
 public interface recognizes {
 	
 	/**
-	 * Í¼ÏñÊ¶±ğ½Ó¿Ú
-	 * @param imageUrl  Í¼Æ¬Â·¾¶
+	 * å›¾åƒè¯†åˆ«æ¥å£
+	 * @param imageUrl  å›¾ç‰‡è·¯å¾„
 	 * @return
 	 * @throws Exception 
 	 */

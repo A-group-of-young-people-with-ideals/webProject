@@ -5,7 +5,7 @@ import com.item.finalTest.domain.emailVO;
 public interface IEmailCSV {
 	
 	/**
-	 * ·¢ËÍÓÊ¼ş
+	 * å‘é€é‚®ä»¶
 	 * @throws Exception 
 	 */
 	public boolean sendEmail(emailVO emailVO) throws Exception;

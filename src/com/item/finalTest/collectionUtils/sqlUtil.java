@@ -6,9 +6,9 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 /**
- * Êı¾İ¿â·â×°Àà
+ * æ•°æ®åº“å°è£…ç±»
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 public final class sqlUtil {
 	public static Connection getConnect() {
@@ -27,7 +27,7 @@ public final class sqlUtil {
 						user, password);
 	        	
 	        }else {
-	        	throw  new Exception("jdbcÅäÖÃ²»ÍêÕû£¬ÇëÍêÉÆ"); 
+	        	throw  new Exception("jdbcé…ç½®ä¸å®Œæ•´ï¼Œè¯·å®Œå–„"); 
 	        }
 		} catch (Exception ex) {
 			ex.printStackTrace();

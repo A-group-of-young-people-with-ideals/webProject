@@ -9,7 +9,7 @@ import java.net.URLConnection;
 import java.util.Map;
 
 /**
- * Http Client ¹¤¾ßÀà
+ * Http Client ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class HttpUtil2 {
 	
@@ -17,7 +17,7 @@ public class HttpUtil2 {
 
 	
 	/**
-	 * ·¢ËÍpostÇëÇó
+	 * å‘é€postè¯·æ±‚
 	 * 
 	 * @param url
 	 * @param header
@@ -28,15 +28,15 @@ public class HttpUtil2 {
 		String result = "";
 		BufferedReader in = null;
 		try {
-			// ÉèÖÃ url
+			// è®¾ç½® url
 			URL realUrl = new URL(url);
 			URLConnection connection = realUrl.openConnection();
 			HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
-			// ÉèÖÃ header
+			// è®¾ç½® header
 			for (String key : header.keySet()) {
 				httpURLConnection.setRequestProperty(key, header.get(key));
 			}
-			// ÉèÖÃÇëÇó body
+			// è®¾ç½®è¯·æ±‚ body
 			httpURLConnection.setDoOutput(true);
 			httpURLConnection.setDoInput(true);
 			httpURLConnection.setRequestProperty("Content-Type", "binary/octet-stream");
@@ -46,11 +46,11 @@ public class HttpUtil2 {
 			out.flush();
 			out.close();
 			if (HttpURLConnection.HTTP_OK != httpURLConnection.getResponseCode()) {
-				System.out.println("Http ÇëÇóÊ§°Ü£¬×´Ì¬Âë£º" + httpURLConnection.getResponseCode());
+				System.out.println("Http è¯·æ±‚å¤±è´¥ï¼ŒçŠ¶æ€ç ï¼š" + httpURLConnection.getResponseCode());
 				return null;
 			}
 
-			// »ñÈ¡ÏìÓ¦body
+			// è·å–å“åº”body
 			in = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
 			String line;
 			while ((line = in.readLine()) != null) {
@@ -62,3 +62,4 @@ public class HttpUtil2 {
 		return result;
 	}
 }
+

@@ -3,13 +3,13 @@ package com.item.finalTest.collectionUtils;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * String·â×°Àà
+ * Stringå°è£…ç±»
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 public final class StringUtil {
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º
 	 * @param str
 	 * @return true/false
 	 */
@@ -23,9 +23,9 @@ public final class StringUtil {
 		return false;
 	}
 	/**
-	 * ½ØÈ¡×Ö·û´®
-	 * @strSrc Ä¿±ê×Ö·û´®
-	 * @iMaxLength  ½ØÈ¡ºóµÄ³¤¶È
+	 * æˆªå–å­—ç¬¦ä¸²
+	 * @strSrc ç›®æ ‡å­—ç¬¦ä¸²
+	 * @iMaxLength  æˆªå–åçš„é•¿åº¦
 	 */
 	public static String trim(String strSrc, int iMaxLength) {
 		if (strSrc == null) {
@@ -52,7 +52,7 @@ public final class StringUtil {
 		return strResult;
 	}
 	/**
-	 * »ñÈ¡Ëæ»ú×Ö·û´®
+	 * è·å–éšæœºå­—ç¬¦ä¸²
 	 */
 	public static String getRandomString(int length) {
 		String str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -66,14 +66,14 @@ public final class StringUtil {
 		return buf.toString();
 	}
 	/**
-	 * ×ó²¹Æë
+	 * å·¦è¡¥é½
 	 * 
 	 * @param target
-	 *            Ä¿±ê×Ö·û´®
+	 *            ç›®æ ‡å­—ç¬¦ä¸²
 	 * @param fix
-	 *            ²¹Æë×Ö·û
+	 *            è¡¥é½å­—ç¬¦
 	 * @param length
-	 *            Ä¿±ê³¤¶È
+	 *            ç›®æ ‡é•¿åº¦
 	 * @return
 	 */
 	public static String lPad(String target, String fix, int length) {
@@ -88,14 +88,14 @@ public final class StringUtil {
 	}
 
 	/**
-	 * ÓÒ²¹Æë
+	 * å³è¡¥é½
 	 * 
 	 * @param target
-	 *            Ä¿±ê×Ö·û´®
+	 *            ç›®æ ‡å­—ç¬¦ä¸²
 	 * @param fix
-	 *            ²¹Æë×Ö·û
+	 *            è¡¥é½å­—ç¬¦
 	 * @param length
-	 *            Ä¿±ê³¤¶È
+	 *            ç›®æ ‡é•¿åº¦
 	 * @return
 	 */
 	public static String rPad(String target, String fix, int length) {
@@ -110,9 +110,9 @@ public final class StringUtil {
 		return newStr.toString();
 	}
 	/**
-	 * »ñÈ¡×Ö·û´®¶ÔÓ¦µÄ×Ö½Ú³¤¶È£¬Ó¢ÎÄÕ¼Ò»¸ö×Ö½Ú£¬ÖĞÎÄ3¸ö×Ö½Ú£¨UTF-8±àÂë£©
+	 * è·å–å­—ç¬¦ä¸²å¯¹åº”çš„å­—èŠ‚é•¿åº¦ï¼Œè‹±æ–‡å ä¸€ä¸ªå­—èŠ‚ï¼Œä¸­æ–‡3ä¸ªå­—èŠ‚ï¼ˆUTF-8ç¼–ç ï¼‰
 	 * @param str
-	 * @return ×Ö·û´®ËùÕ¼×Ö½Ú
+	 * @return å­—ç¬¦ä¸²æ‰€å å­—èŠ‚
 	 */
 	public static int getByteLength(String str) {
 		try {
@@ -123,18 +123,18 @@ public final class StringUtil {
 		}
 	}
 	/**
-	 * Ê××ÖÄ¸´óĞ´
+	 * é¦–å­—æ¯å¤§å†™
 	 * @param value
 	 * @return
 	 */
 	public static String upperCaseFirstChar(String value) {
 		char[] cs = value.toCharArray();
-		// ASCIIÂëÇ°ÒÆ32Î»
+		// ASCIIç å‰ç§»32ä½
 		cs[0] -= 32;
 		return String.valueOf(cs);
 	}
 	/**
-	 * ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎªÊıÖµĞÍ×Ö·û´®
+	 * åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºæ•°å€¼å‹å­—ç¬¦ä¸²
 	 * @param numberStr
 	 * @return
 	 */

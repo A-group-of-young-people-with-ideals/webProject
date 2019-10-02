@@ -19,63 +19,63 @@ public class fileBusiCSImpl implements IFileBusiCS {
 	    String realPathHead=basePath+"src\\upload";
 //	    System.out.println(basePath);
 		if(list==null) {
-			throw new Exception("ÉÏ´«ÎÄ¼şÎª¿Õ");
+			throw new Exception("ä¸Šä¼ æ–‡ä»¶ä¸ºç©º");
 		}
-		//¸ù¾İ²»Í¬ÎÄ¼şÀàĞÍ´æ·Å²»Í¬Î»ÖÃ
+		//æ ¹æ®ä¸åŒæ–‡ä»¶ç±»å‹å­˜æ”¾ä¸åŒä½ç½®
 		for (FileItem fileItem : list) {
 			if(fileItem.isFormField()) {
-				//»ñÈ¡±íµ¥×Ö¶Î
+				//è·å–è¡¨å•å­—æ®µ
 				String fileName=fileItem.getFieldName();
 				String value=fileItem.getString("UTF-8");
 				System.out.println(fileName+"="+value);
 			}else {
-				// µÃµ½ÉÏ´«µÄÎÄ¼şÃû³Æ£¬
+				// å¾—åˆ°ä¸Šä¼ çš„æ–‡ä»¶åç§°ï¼Œ
 				String filename = fileItem.getName();
 //				System.out.println(filename);
 				if (filename == null || filename.trim().equals("")) {
 					continue;
 				}
-				//´¦Àí»ñÈ¡µ½µÄÉÏ´«ÎÄ¼şÃûµÄ¾ø¶ÔÂ·¾¶£¬Ö»±£ÁôÎÄ¼şÃû²¿·Ö
+				//å¤„ç†è·å–åˆ°çš„ä¸Šä¼ æ–‡ä»¶åçš„ç»å¯¹è·¯å¾„ï¼Œåªä¿ç•™æ–‡ä»¶åéƒ¨åˆ†
 			    filename=filename.substring(filename.lastIndexOf("\\")+1);
-			    //µÃµ½ÉÏ´«ÎÄ¼şµÄÀ©Õ¹Ãû
+			    //å¾—åˆ°ä¸Šä¼ æ–‡ä»¶çš„æ‰©å±•å
 			    String fileExtName=filename.substring(filename.lastIndexOf(".")+1);
-			    //»ñÈ¡ÉÏ´«µÄÊäÈëÁ÷
+			    //è·å–ä¸Šä¼ çš„è¾“å…¥æµ
 			    InputStream in=fileItem.getInputStream();
-			    //ÎÄ¼şÉÏ´«ºó±£´æµÄÃû³Æ
+			    //æ–‡ä»¶ä¸Šä¼ åä¿å­˜çš„åç§°
 			    String saveFileName=makeFileName(filename);
 			    String realPath=realPathHead;
 			    if(!StringUtil.isBlank(fileType)) {
 			    	
 			    	if(fileType.equals(finalTest.fileType.IMAGE_TYPE)) {
-			    		// Èç¹ûÊÇÍ¼Æ¬ÀàĞÍ´æ·ÅÎ»ÖÃÎªsrc\\upload\\photos
+			    		// å¦‚æœæ˜¯å›¾ç‰‡ç±»å‹å­˜æ”¾ä½ç½®ä¸ºsrc\\upload\\photos
 			    		realPath=makeSavePath(realPathHead+"\\photos\\");
 			    		
 			    	}else if (fileType.equals(finalTest.fileType.SOUND_TYPE)) {
-			    		//Èç¹ûÊÇÒôÆµÀàĞÍ´æ·ÅÔÚsrc\\upload\\sounds
+			    		//å¦‚æœæ˜¯éŸ³é¢‘ç±»å‹å­˜æ”¾åœ¨src\\upload\\sounds
 			    		 realPath=makeSavePath(realPathHead+"\\sounds\\");
 						
 					}else {
-						//ÆäËûÀàĞÍÎÄ¼ş´æ·ÅÔÚsrc\\upload\\file
+						//å…¶ä»–ç±»å‹æ–‡ä»¶å­˜æ”¾åœ¨src\\upload\\file
 						realPath=makeSavePath(realPathHead+"\\file\\");
 					}
 			    }
 			    FileOutputStream out = new FileOutputStream(realPath + "\\" + saveFileName);
 			    byte buffer[] = new byte[1024];
-				// ÅĞ¶ÏÊäÈëÁ÷ÖĞµÄÊı¾İÊÇ·ñÒÑ¾­¶ÁÍêµÄ±êÊ¶
+				// åˆ¤æ–­è¾“å…¥æµä¸­çš„æ•°æ®æ˜¯å¦å·²ç»è¯»å®Œçš„æ ‡è¯†
 				int len = 0;
-				// Ñ­»·½«ÊäÈëÁ÷¶ÁÈëµ½»º³åÇøµ±ÖĞ£¬(len=in.read(buffer))>0¾Í±íÊ¾inÀïÃæ»¹ÓĞÊı¾İ
+				// å¾ªç¯å°†è¾“å…¥æµè¯»å…¥åˆ°ç¼“å†²åŒºå½“ä¸­ï¼Œ(len=in.read(buffer))>0å°±è¡¨ç¤ºiné‡Œé¢è¿˜æœ‰æ•°æ®
 				while ((len = in.read(buffer)) > 0) {
-					// Ê¹ÓÃFileOutputStreamÊä³öÁ÷½«»º³åÇøµÄÊı¾İĞ´Èëµ½Ö¸¶¨µÄÄ¿Â¼(savePath + "\\" + filename)µ±ÖĞ
+					// ä½¿ç”¨FileOutputStreamè¾“å‡ºæµå°†ç¼“å†²åŒºçš„æ•°æ®å†™å…¥åˆ°æŒ‡å®šçš„ç›®å½•(savePath + "\\" + filename)å½“ä¸­
 					out.write(buffer, 0, len);
 				}
-				// ¹Ø±ÕÊäÈëÁ÷
+				// å…³é—­è¾“å…¥æµ
 				in.close();
-				// ¹Ø±ÕÊä³öÁ÷
+				// å…³é—­è¾“å‡ºæµ
 				out.close();
-				System.out.println("=============>>>>>µÚÒ»¸öÎÄ¼şÉÏ´«³É¹¦========>>>>>>");
+				System.out.println("=============>>>>>ç¬¬ä¸€ä¸ªæ–‡ä»¶ä¸Šä¼ æˆåŠŸ========>>>>>>");
 			}
-			System.out.println("=============>>>>>±íµ¥ÖĞËùÓĞÎÄ¼şÉÏ´«³É¹¦=====>>>>>>");
-			 result="ÉÏ´«³É¹¦";
+			System.out.println("=============>>>>>è¡¨å•ä¸­æ‰€æœ‰æ–‡ä»¶ä¸Šä¼ æˆåŠŸ=====>>>>>>");
+			 result="ä¸Šä¼ æˆåŠŸ";
 		}
 		return result;
 	}
@@ -85,7 +85,7 @@ public class fileBusiCSImpl implements IFileBusiCS {
 		System.out.println(dir);
 		File file=new File(dir);
 		if (!file.exists()) {
-			// ´´½¨Ä¿Â¼
+			// åˆ›å»ºç›®å½•
 			file.mkdirs();
 		}
 		return dir;

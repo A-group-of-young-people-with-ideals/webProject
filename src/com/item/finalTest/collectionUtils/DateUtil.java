@@ -8,9 +8,9 @@ import java.util.Calendar;
 import java.util.Locale;
 
 /**
- * Ê±¼ä¹¤¾ßÀà
+ * æ—¶é—´å·¥å…·ç±»
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 public final class DateUtil {
 
@@ -39,11 +39,11 @@ public final class DateUtil {
 	public static final String TIME_ZONE_UTC = "GMT";
 
 	private DateUtil() {
-		// ½ûÖ¹ÊµÀı»¯
+		// ç¦æ­¢å®ä¾‹åŒ–
 	}
 
 	/**
-	 *  »ñÈ¡µ±Ç°Ê±¼ä´Á
+	 *  è·å–å½“å‰æ—¶é—´æˆ³
 	 * @return
 	 */
 	public static long getCurrentTimeMillis() {
@@ -56,7 +56,7 @@ public final class DateUtil {
 	}
 
 	/**
-	 * »ñÈ¡ÏµÍ³Ê±¼ä
+	 * è·å–ç³»ç»Ÿæ—¶é—´
 	 * 
 	 * @return
 	 */
@@ -65,7 +65,7 @@ public final class DateUtil {
 	}
 
 	/**
-	 * ¸ù¾İÖ¸¶¨µÄ¸ñÊ½ÊäÈëÊ±¼ä×Ö·û´®
+	 * æ ¹æ®æŒ‡å®šçš„æ ¼å¼è¾“å…¥æ—¶é—´å­—ç¬¦ä¸²
 	 * 
 	 * @param pattern
 	 * @return
@@ -73,7 +73,7 @@ public final class DateUtil {
 	 */
 	public static String getDateString(String pattern) throws Exception {
 		if (StringUtil.isBlank(pattern)) {
-			throw new Exception("ÇëÖ¸¶¨ÈÕÆÚ¸ñÊ½");
+			throw new Exception("è¯·æŒ‡å®šæ—¥æœŸæ ¼å¼");
 		}
 		Timestamp time = getSysDate();
 		DateFormat dfmt = new SimpleDateFormat(pattern);
@@ -82,7 +82,7 @@ public final class DateUtil {
 	}
 
 	/**
-	 * »ñÈ¡Ê±¼ä×Ö·û´®
+	 * è·å–æ—¶é—´å­—ç¬¦ä¸²
 	 * 
 	 * @param time
 	 * @param pattern
@@ -91,10 +91,10 @@ public final class DateUtil {
 	 */
 	public static String getDateString(Timestamp time, String pattern) throws Exception {
 		if (time == null) {
-			throw new Exception("ÇëÖ¸¶¨Ê±¼ä");
+			throw new Exception("è¯·æŒ‡å®šæ—¶é—´");
 		}
 		if (StringUtil.isBlank(pattern)) {
-			throw new Exception("ÇëÖ¸¶¨¸ñÊ½");
+			throw new Exception("è¯·æŒ‡å®šæ ¼å¼");
 		}
 		DateFormat dfmt = new SimpleDateFormat(pattern);
 		java.util.Date date = time;
@@ -102,7 +102,7 @@ public final class DateUtil {
 	}
 
 	/**
-	 * »ñÈ¡Ö¸¶¨Ê±¼äµÄ¸ñÊ½»¯´®
+	 * è·å–æŒ‡å®šæ—¶é—´çš„æ ¼å¼åŒ–ä¸²
 	 * 
 	 * @param date
 	 * @param pattern
@@ -111,16 +111,16 @@ public final class DateUtil {
 	 */
 	public static String getDateString(Date date, String pattern) throws Exception {
 		if (date == null) {
-			throw new Exception("ÇëÖ¸¶¨Ê±¼ä");
+			throw new Exception("è¯·æŒ‡å®šæ—¶é—´");
 		}
 		if (StringUtil.isBlank(pattern)) {
-			throw new Exception("ÇëÖ¸¶¨¸ñÊ½");
+			throw new Exception("è¯·æŒ‡å®šæ ¼å¼");
 		}
 		SimpleDateFormat sdfmt = new SimpleDateFormat(pattern);
 		return date != null ? sdfmt.format(date) : "";
 	}
 	/**
-	 * »ñÈ¡Ö¸¶¨Ê±¼äµÄ¸ñÊ½»¯´®
+	 * è·å–æŒ‡å®šæ—¶é—´çš„æ ¼å¼åŒ–ä¸²
 	 * 
 	 * @param date
 	 * @param pattern
@@ -130,16 +130,16 @@ public final class DateUtil {
 	 */
 	public static String getDateString(Date date, String pattern, Locale locale) throws Exception {
 	  if (date == null) {
-	    throw new Exception("ÇëÖ¸¶¨Ê±¼ä");
+	    throw new Exception("è¯·æŒ‡å®šæ—¶é—´");
 	  }
 	  if (StringUtil.isBlank(pattern)) {
-	    throw new Exception("ÇëÖ¸¶¨¸ñÊ½");
+	    throw new Exception("è¯·æŒ‡å®šæ ¼å¼");
 	  }
 	  SimpleDateFormat sdfmt = new SimpleDateFormat(pattern, locale);
 	  return date != null ? sdfmt.format(date) : "";
 	}
 	/**
-	 * »ñÈ¡Ò»ÌìµÄµÚÒ»Ãë Èç£º2011-11-11 00:00:00
+	 * è·å–ä¸€å¤©çš„ç¬¬ä¸€ç§’ å¦‚ï¼š2011-11-11 00:00:00
 	 * @param sysDate
 	 * @return
 	 */
@@ -154,7 +154,7 @@ public final class DateUtil {
 		return new Timestamp(calendar.getTimeInMillis());
 	}
 	/**
-	 * »ñÈ¡Ò»ÌìµÄ×îºóÒ»Ãë Èç£º2011-11-11 23:59:59
+	 * è·å–ä¸€å¤©çš„æœ€åä¸€ç§’ å¦‚ï¼š2011-11-11 23:59:59
 	 * @param sysDate
 	 * @return
 	 */
@@ -170,7 +170,7 @@ public final class DateUtil {
 		return new Timestamp(calendar.getTimeInMillis());
 	}
 	/**
-	 * »ñÈ¡Ö¸¶¨Ê±¼äµÄÆ«ÒÆÌìÊıºóµÄÊ±¼ä
+	 * è·å–æŒ‡å®šæ—¶é—´çš„åç§»å¤©æ•°åçš„æ—¶é—´
 	 * 
 	 * @param sysDate
 	 * @param offsetDays
@@ -189,3 +189,4 @@ public final class DateUtil {
 		return new Date(calendar.getTimeInMillis());
 	}
 }
+

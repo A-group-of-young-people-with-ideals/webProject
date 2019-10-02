@@ -3,32 +3,32 @@ package com.item.finalTest.services.interfaces;
 import com.item.finalTest.domain.userVO;
 
 /**
- * ÓÃ»§ÕË»§²Ù×÷
+ * ç”¨æˆ·è´¦æˆ·æ“ä½œ
  * @author hemb
- * @date   2019Äê9ÔÂ14ÈÕ
+ * @date   2019å¹´9æœˆ14æ—¥
  */
 public interface IUserCSV {
 	
 	/**
-	 * Ìí¼ÓÓÃ»§
+	 * æ·»åŠ ç”¨æˆ·
 	 * @throws Exception 
 	 */
 	public void saveUser(userVO user) throws Exception;
 	
 	/**
-	 * ¸ù¾İID²éÑ¯ÓÃ»§
+	 * æ ¹æ®IDæŸ¥è¯¢ç”¨æˆ·
 	 * @throws Exception 
 	 */
 	public userVO queryUserById(long userId) throws Exception;
 	
 	/**
-	 * ¸ù¾İIdĞŞ¸ÄÓÃ»§ĞÅÏ¢
+	 * æ ¹æ®Idä¿®æ”¹ç”¨æˆ·ä¿¡æ¯
 	 * @throws Exception 
 	 */
 	public void updateUser(userVO user,long id) throws Exception;
 	
 	/**
-	 * Í¨¹ıIdÉ¾³ıÓÃ»§
+	 * é€šè¿‡Idåˆ é™¤ç”¨æˆ·
 	 */
 	public void deleteUser(long Id);
 }

@@ -29,10 +29,10 @@ public class test {
 	public void testQueryUserById() throws Exception {
 //		 IUserCSV iUserCSV=new userCSVImpl();
 //		  iUserCSV.queryUserById(1);
-//		File file=new File("C:\\eclipse2019\\workspace\\Demo\\src\\com\\item\\finalTest\\collectionUtils\\SUtil.java");
-//		file.setReadOnly();
-//		file.setWritable(false);
-//		System.out.println(file.canWrite());
+		File file=new File("C:\\eclipse2019\\workspace\\Demo\\src\\com\\item\\finalTest\\collectionUtils\\FileUtil.java");
+		file.setReadOnly();
+		file.setWritable(false);
+		System.out.println(file.canWrite());
 //		file.setWritable(true);
 //		System.out.println(file.canWrite());
 //		recognizes recognizes=new recognizeImpl();
@@ -47,8 +47,8 @@ public class test {
 //		IFileCSV iFileCSV=new fileCSVImpl();
 //		iFileCSV.UpLoadFile(list, "0");
 		
-		File file=new File("C:\\Users\\zydx\\Desktop\\1189688.jpg");
-		System.out.println(new FileInputStream(file));
+//		File file=new File("C:\\Users\\zydx\\Desktop\\1189688.jpg");
+//		System.out.println(new FileInputStream(file));
 	  
 	}
 }
